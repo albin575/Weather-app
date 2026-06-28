@@ -472,6 +472,39 @@
             color: #ff6b6b;
         }
 
+        /* Creator Badge Styles */
+        .creator-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 25px;
+            animation: fadeIn 0.8s ease;
+        }
+
+        .creator-badge img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .creator-badge img:hover {
+            transform: scale(1.05);
+        }
+
+        .creator-text {
+            font-size: 0.95rem;
+            font-weight: 500;
+            opacity: 0.95;
+            text-align: center;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            letter-spacing: 0.3px;
+        }
+
         @media (max-width: 768px) {
             .header {
                 flex-direction: column;
@@ -504,6 +537,11 @@
                 text-align: left;
                 order: 3;
             }
+
+            .creator-badge img {
+                width: 90px;
+                height: 90px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -521,6 +559,10 @@
 
             .location-info h1 {
                 font-size: 1.8rem;
+            }
+
+            .creator-text {
+                font-size: 0.85rem;
             }
         }
     </style>
@@ -547,6 +589,11 @@
                     <button id="locationBtn" title="എന്റെ ലൊക്കേഷൻ"><i class="fas fa-location-arrow"></i></button>
                 </div>
             </header>
+
+            <div class="creator-badge">
+                <img src="3736373881.png" alt="Albin Baby">
+                <div class="creator-text">Created by Albin Baby, Chennattu (H), Anchelpetty (P.O), Onakkoor, City Piravom</div>
+            </div>
 
             <section class="current-weather">
                 <div class="weather-card glass">
@@ -844,4 +891,4 @@
         document.addEventListener('DOMContentLoaded', () => app.init());
     </script>
 </body>
-                                                             </html>
+</html>
